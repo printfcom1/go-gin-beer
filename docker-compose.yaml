@@ -1,0 +1,16 @@
+version: '3'
+volumes:
+  data:
+services:
+  dbMaria:
+    image: mariadb
+    environment:
+      TZ: Asia/Bangkok
+      MYSQL_ROOT_PASSWORD: P@ssw0rd1
+      MYSQL_DATABASE: beer
+      MYSQL_USER: user
+      MYSQL_PASSWORD: P@ssw0rd1
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
