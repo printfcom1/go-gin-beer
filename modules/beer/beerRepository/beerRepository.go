@@ -18,7 +18,7 @@ type beerRepositoryDB struct {
 	db *sqlx.DB
 }
 
-func NewCostomerRepositoryDB(db *sqlx.DB) beerRepositoryDB {
+func NewBeerRepositoryDB(db *sqlx.DB) beerRepositoryDB {
 	return beerRepositoryDB{db: db}
 }
 

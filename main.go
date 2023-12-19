@@ -14,7 +14,7 @@ func main() {
 	logs := logs.NewwriteLogsDB(logsDB)
 
 	BeerDB := database.InitDatabaseMariaDB()
-	beerRepository := beerRepository.NewCostomerRepositoryDB(BeerDB)
+	beerRepository := beerRepository.NewBeerRepositoryDB(BeerDB)
 	beerService := beerService.NewBeerService(&beerRepository, logs)
 	beerHandler := beerHandler.NewBeerHandler(&beerService, logs)
 
